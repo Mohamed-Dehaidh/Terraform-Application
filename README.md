@@ -14,4 +14,4 @@ This project sets up a basic AWS infrastructure using Terraform. It includes:
 ## Usage
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Mohamed-Dehaidh/Terraform-Application.git
