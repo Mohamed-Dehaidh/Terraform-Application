@@ -10,8 +10,8 @@ resource "aws_autoscaling_group" "ec2_cluster" {
 }
 #############################################################################################
 resource "aws_launch_configuration" "ec2_launch_config" {
-  name                        = "ec2_launch_config"
-  image_id                    = data.aws_ami.amazon_linux
+  name                        = "ec2-launch-config"
+  image_id                    = data.aws_ami.amazon_linux.id
   instance_type               = var.instance_type
   security_groups             = [aws_security_group.ec2_sg.id]
   key_name                    = aws_key_pair.test_key.key_name

@@ -1,5 +1,5 @@
 resource "aws_lb" "elb" {
-  name               = "elastic_load_balancer"
+  name               = "elastic-load-balancer"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.load_balancer_sg.id]
@@ -8,7 +8,7 @@ resource "aws_lb" "elb" {
 ################################################################
 # Target group
 resource "aws_alb_target_group" "tg" {
-  name     = "ec2_tg"
+  name     = "ec2-tg"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc01.id

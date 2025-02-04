@@ -5,7 +5,7 @@ resource "tls_private_key" "key_gen" {
 ###################################################
 resource "aws_key_pair" "test_key" {
   key_name   = "test_key"
-  public_key = tls_private_key.key_gen.id
+  public_key = tls_private_key.key_gen.public_key_openssh
 }
 ###################################################
 resource "local_file" "private_key" {
