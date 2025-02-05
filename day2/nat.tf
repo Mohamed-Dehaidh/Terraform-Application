@@ -12,7 +12,7 @@ resource "aws_nat_gateway" "nat_private_sub_az01" {
 }
 # NAT Gateway to allow private subnet to connect out the way
 resource "aws_eip" "nat_private_sub_az01_eip" {
-    vpc = true
+    domain = "vpc"
 }
 ##########################################################################################
 resource "aws_nat_gateway" "nat_private_sub_az02" {
@@ -29,5 +29,5 @@ resource "aws_nat_gateway" "nat_private_sub_az02" {
 }
 # NAT Gateway to allow private subnet to connect out the way
 resource "aws_eip" "nat_private_sub_az02_eip" {
-    vpc = true
+     domain = "vpc"
 }
